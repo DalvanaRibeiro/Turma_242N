@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo a codificação dos caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Tornando o site responsivo para que ele se ajuste a diferentes tamanhos de tela (como celulares e tablets) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
+    <title>Descubra a Palavra</title>
+    <!-- Vincula o arquivo CSS (estilos) à página HTML -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- A caixa que contém todo o conteúdo do jogo -->
+    <div class="container">
+        <!-- Título principal do jogo -->
+        <h1>Descubra a Palavra</h1>
+        
+        <!-- Imagem no topo do jogo, mostrando um cachorro -->
+        <img id="imagem-dog" src="imagens/cao.png" alt="Imagem do Jogo" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;" />
+        
+        <!-- Seção onde a palavra secreta será mostrada -->
+        <div id="palavra">
+            <h2>Palavra:</h2>
+            <!-- Aqui será atualizada a palavra secreta com as letras e espaços -->
+            <div id="palavra-secreta"></div>
+        </div>
+        
+        <!-- Mostra o número de letras da palavra secreta -->
+        <div id="numero-letras">
+            <h3 id="numero-letras">Número de letras: 0</h3>
+        </div>
+        
+        <!-- Seção onde o número de tentativas restantes será mostrado -->
+        <div id="tentativas">
+            <h3>Tentativas restantes: <span id="tentativas-contagem">5</span></h3>
+        </div>
+
+        <!-- Caixa de entrada onde o usuário pode digitar uma letra -->
+        <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+
+        <!-- Botão que chama a função 'verificarLetra' quando pressionado -->
+        <button onclick="verificarLetra()">Chutar</button>
+
+        <!-- Aqui será mostrada a mensagem do jogo, informando o resultado do chute -->
+        <p id="mensagem"></p>
+
+        <!-- Botão que reinicia o jogo quando pressionado -->
+        <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+
+        <!-- Imagens que indicam se o chute foi correto ou incorreto -->
+        <div id="imagem-resultado">
+            <!-- Imagem que aparece quando o jogador acerta a letra -->
+            <img id="imagem-acerto" src="imagens/acerto2.jpg" alt="Acerto" style="display: none; width: 100px; height: 100px;" />
+            <!-- Imagem que aparece quando o jogador erra a letra -->
+            <img id="imagem-erro" src="imagens/erro.jpg" alt="Erro" style="display: none; width: 100px; height: 100px;" />
+        </div>
+    </div>
+
+    <!-- Aqui o JavaScript (que está no arquivo "script.js") será carregado -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--define o idioma-->
+
+<head>
+    <meta charset="UTF-8"> <!--codificação de caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title> <!-- título da aba -->
+    <!-- Link para o arquivo CSS externo -->
+     <link rel="stylesheet" href="style.css">
+     <!-- Inclusão do script JS externo que vai controlar as operações bancárias-->
+      <script src="logica.js"></script>
+
+</head>
+
+<body>
+    <!-- Contêiner principal para o conteúdo da interface -->
+    <div class="container">
+        <!-- Título principal da aplicação -->
+        <h1> Sistema Bancário dos parças </h1>
+
+        <!--Campo de entrada para o valor -->
+        <label form="valor"> Digite um valor: </label> <!-- Rótulo para o campo de valor -->
+        <input type="number" id="valor" placeholder="Ex: 100.00"><br> <!-- campo para inserir o valor -->
+        <!-- Botões para interagir com a conta bancária -->
+         <button class="botao1" onclick="sacar()">Sacar</button> <!-- Botão para realizar o saque -->
+         <button class="botao2" onclick="depositar()"> Depositar</button> <!-- Botão para realizar o depósito -->
+         <!-- Exibindo o saldo atual da conta -->
+          <div class="balance">
+            Saldo: R$ <span id="saldo">0.00</span><!-- Exibição dinâmica do saldo-->
+          </div>
+    </div>
+
+
+
+
+</body>
+
+
+</html>
