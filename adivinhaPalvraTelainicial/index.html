@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8 e a responsividade para dispositivos móveis -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra a Palavra</title> <!-- Título da página -->
+    <!-- Link para o arquivo CSS (estilos) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela inicial onde o usuário digita a palavra -->
+    <div id="tela-inicial" class="container">
+        <h1>Digite a Palavra Secreta</h1> <!-- Título da tela inicial -->
+        <!-- Campo de entrada onde o usuário digita a palavra secreta (campo de senha para ocultar a palavra) -->
+        <input type="password" id="input-palavra" maxlength="15" placeholder="Digite a palavra" />
+        <!-- Botão que chama a função para iniciar o jogo -->
+        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <!-- Tela do jogo, inicialmente oculta -->
+    <div id="tela-jogo" class="container" style="display: none;">
+        <h1>Descubra a Palavra</h1> <!-- Título da tela do jogo -->
+        <!-- Imagem que será exibida durante o jogo -->
+        <img id="imagem-dog" src="imagens/cao.png" alt="Imagem do Jogo" style="width: 100%; max-width: 200px; height: auto; border-radius: 10px;" />
+        
+        <!-- Seção onde a palavra secreta será exibida (com underscores para letras não adivinhadas) -->
+        <div id="palavra">
+            <h2>Palavra:</h2> <!-- Título da seção de palavra -->
+            <div id="palavra-secreta"></div> <!-- Aqui será atualizada a palavra com as letras adivinhadas -->
+        </div>
+        
+        <!-- Exibe o número de letras da palavra -->
+        <div id="numero-letras">
+            <h3 id="numero-letras">Número de letras: 0</h3> <!-- Aqui é exibido o número de letras da palavra secreta -->
+        </div>
+        
+        <!-- Exibe o número de tentativas restantes -->
+        <div id="tentativas">
+            <h3>Tentativas restantes: <span id="tentativas-contagem">5</span></h3> <!-- Aqui é mostrado o número de tentativas restantes -->
+        </div>
+        
+        <!-- Campo de entrada onde o usuário digita uma letra -->
+        <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+        <!-- Botão que chama a função para verificar a letra digitada -->
+        <button onclick="verificarLetra()">Chutar</button>
+        
+        <!-- Área para exibir mensagens de sucesso ou erro -->
+        <p id="mensagem"></p>
+        
+        <!-- Botão para reiniciar o jogo -->
+        <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+        
+        <!-- Seção para exibir a imagem de acerto ou erro -->
+        <div id="imagem-resultado">
+            <!-- Imagem que aparece quando o jogador acerta uma letra -->
+            <img id="imagem-acerto" src="imagens/acerto2.jpg" alt="Acerto" style="display: none; width: 100px; height: 100px;" />
+            <!-- Imagem que aparece quando o jogador erra uma letra -->
+            <img id="imagem-erro" src="imagens/erro.jpg" alt="Erro" style="display: none; width: 100px; height: 100px;" />
+        </div>
+    </div>
+
+    <!-- Link para o script JavaScript que contém a lógica do jogo -->
+    <script src="script.js"></script>
+</body>
+</html>
