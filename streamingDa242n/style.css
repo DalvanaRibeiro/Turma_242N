@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.categoria {
+    margin-bottom: 50px;
+}
+
+.categoria h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filmes {
+    display: flex;
+    overflow-x: auto; /* Permite rolar horizontalmente */
+    padding-bottom: 10px; /* Para o efeito de rolagem sem cortar as bordas */
+}
+
+.filme {
+    width: 250px;
+    background-color: #fff;
+    margin-right: 20px; /* Espaçamento entre os filmes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0; /* Impede que os filmes encolham */
+    transition: transform 0.2s; /* Para adicionar uma animação ao passar o mouse */
+}
+
+.filme:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.filme img {
+    width: auto; /* Ajusta a largura da imagem automaticamente */
+    height: 300px; /* Define a altura que você desejar para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
+}
+
+
+.filme h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.filme p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
