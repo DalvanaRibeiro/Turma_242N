@@ -1,0 +1,71 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;  /* Cor de fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Altura da tela */
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombras ao redor do container */
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Cria 3 colunas */
+    grid-template-rows: repeat(3, 1fr);  /* Cria 3 linhas */
+    gap: 10px;  /* Espaçamento entre as células */
+    margin-bottom: 20px;
+}
+
+.celula {
+    width: 80px;
+    height: 80px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;  /* Efeito de transição para o hover */
+}
+
+.celula:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5113ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #167fc5;  /* Muda a cor ao passar o mouse */
+}
